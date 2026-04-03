@@ -1,12 +1,7 @@
-chat_dict = {
-    
-}
-
-
 
 import re
 
-master_chat_dict = {
+CHAT_DICT = {
 
     # ─────────────────────────────────────────
     # NUMBERS AS WORDS / NUMERIC SLANG
@@ -190,6 +185,7 @@ master_chat_dict = {
     "brt": "be right there",
     "omw": "on my way",
     "otw": "on the way",
+    "ilu":"i love you",
 
     # ─────────────────────────────────────────
     # COMMON ABBREVIATIONS & SHORTCUTS
