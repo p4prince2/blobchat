@@ -1,25 +1,19 @@
-
-
 # BlobChat
 
-A lightweight Python library for transforming raw chat text into structured, meaningful data.
+A lightweight Python library for transforming messy chat text into clean, meaningful data.
 
-BlobChat helps you clean, analyze, and convert chat conversations (like WhatsApp, Messenger, etc.) into useful insights — similar to how pandas works with tabular data.
+BlobChat helps you clean, normalize, and process chat conversations (WhatsApp, Messenger, etc.) — similar to how pandas works with structured data.
 
 ---
 
 ## 🚀 Features
 
-- 🧹 Clean and normalize chat text
-    
-- 🔥 Remove emojis and unwanted symbols
-    
-- 📊 Word count and basic text analysis
-    
-- 🧠 Simple, chainable API (like pandas)
-    
-- ⚡ Lightweight and easy to use
-    
+* 🧹 Clean and normalize chat text
+* 🔤 Convert slang to meaningful text (`u → you`, `gr8 → great`)
+* 😂 Remove emojis and unwanted symbols
+* ⚡ Fast and lightweight
+* 🧠 Simple API for preprocessing chat data
+* 🛠 CLI support for quick usage
 
 ---
 
@@ -29,7 +23,7 @@ BlobChat helps you clean, analyze, and convert chat conversations (like WhatsApp
 pip install blobchat
 ```
 
-> ⚠️ Currently under development. For latest version:
+> ⚠️ For latest development version:
 
 ```bash
 git clone https://github.com/p4prince2/blobchat.git
@@ -42,38 +36,58 @@ pip install -e .
 ## 🧪 Quick Example
 
 ```python
-from blobchat import Chat
+from blobchat.cleaner import clean_text
 
-chat = Chat("Hello BRO!!! 😄🔥 How are you?")
-chat.clean().remove_symbols()
+text = "u r gr8 lol 😂"
+cleaned = clean_text(text)
 
-print(chat.text)
-print(chat.word_count())
+print(cleaned)
 ```
 
 ### Output:
 
 ```
-hello bro how are you
-5
+you are great laughing
 ```
 
 ---
 
-## 🧠 Planned Features
+## ⚡ Alternative API
 
-- 📂 Read chat files (WhatsApp, etc.)
-    
-- 👥 Detect users and messages
-    
-- 📅 Extract timestamps
-    
-- 📊 Convert chats to DataFrame
-    
-- 📈 Analytics (top users, word frequency, etc.)
-    
-- 😊 Sentiment analysis
-    
+```python
+from blobchat.main import process_chat
+
+text = "brb ttyl!"
+print(process_chat(text))
+```
+
+---
+
+## 💻 CLI Usage
+
+```bash
+blobchat "u r awesome bro 😂"
+```
+
+---
+
+## 🧠 Slang Dictionary
+
+Slang mappings are stored in:
+
+```
+src/blobchat/slang_dict.py
+```
+
+You can extend it easily:
+
+```python
+SLANG_DICT = {
+    "u": "you",
+    "r": "are",
+    "idk": "i don't know",
+}
+```
 
 ---
 
@@ -83,25 +97,26 @@ hello bro how are you
 blobchat/
 ├── src/blobchat/
 │   ├── __init__.py
-│   └── core.py
+│   ├── main.py
+│   ├── cleaner.py
+│   ├── slang_dict.py
+│   ├── utils.py
+│   ├── cli.py
+│   └── py.typed
+│
 ├── tests/
-├── README.md
+│   └── test_blobchat.py
+│
+├── dist/
 ├── pyproject.toml
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
 
 ---
 
-## 🧑‍💻 Development
-
-Clone the repo and install in editable mode:
-
-```bash
-git clone https://github.com/p4prince2/blobchat.git
-cd blobchat
-pip install -e .
-```
-
-Run tests:
+## 🧪 Running Tests
 
 ```bash
 pytest
@@ -109,10 +124,34 @@ pytest
 
 ---
 
+## 📦 Build & Publish
+
+```bash
+python -m build
+twine upload dist/*
+```
+
+---
+
+## 🧠 Planned Features
+
+* 📂 Read chat files (WhatsApp, Telegram, etc.)
+* 👥 Detect users and messages
+* 📅 Extract timestamps
+* 📊 Convert chats to structured format (DataFrame-like)
+* 📈 Analytics (word frequency, top users)
+* 😊 Sentiment analysis
+
+---
+
 ## 🤝 Contributing
 
-Contributions are welcome!  
-Feel free to open issues or submit pull requests.
+Contributions are welcome!
+
+1. Fork the repo
+2. Create a new branch
+3. Make changes
+4. Submit a PR
 
 ---
 
@@ -124,5 +163,9 @@ MIT License
 
 ## 👨‍💻 Author
 
-**Prince Kushwaha**  
-GitHub: [https://github.com/p4prince2](https://github.com/p4prince2)
+**Prince Kushwaha**
+GitHub: https://github.com/p4prince2
+
+---
+
+⭐ If you like this project, consider giving it a star!
