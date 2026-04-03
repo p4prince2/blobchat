@@ -1,17 +1,21 @@
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
 name = "blobchat"
 version = "0.1.0"
 description = "Chat text cleaning library (slang → meaningful text)"
+
 authors = [
-    {name = "Prince Kushwaha", email = "p4prince2@email.com" }
+    { name = "Prince Kushwaha", email = "p4prince2@email.com" }
 ]
+
 readme = "README.md"
 requires-python = ">=3.7"
+
+license = { text = "MIT" }
+
 dependencies = []
+
+[tool.setuptools]
+license-files = []   # 🔥 IMPORTANT FIX
 
 [tool.setuptools.packages.find]
 where = ["src"]
