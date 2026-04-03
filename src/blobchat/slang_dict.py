@@ -2164,7 +2164,7 @@ master_chat_dict = {
     "bday": "birthday",
     "hbd": "happy birthday",
     "gm": "good morning",
-    "gn": "good night"
+    "gn": "good night",
 
 
     # ─────────────────────────────────────────
