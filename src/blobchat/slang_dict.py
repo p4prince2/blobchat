@@ -81,6 +81,13 @@ CHAT_DICT = {
     "leet": "elite",
     "lol1": "laughing out loud",
     "rofl1": "rolling on the floor laughing",
+    "msg": "message",
+    "pic": "picture",
+    "bro": "brother",
+    "wtf": "what the hell",
+    "asap": "as soon as possible",
+    "lmao": "laughing hard",
+    "imo": "in my opinion",
 
     # ─────────────────────────────────────────
     # GREETINGS & FAREWELLS
