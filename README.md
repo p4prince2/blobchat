@@ -15,7 +15,7 @@ BlobChat helps you clean, normalize, and process chat conversations (WhatsApp, M
 * 🧠 Simple API for preprocessing chat data
 * 🛠 CLI support for quick usage
 
----
+---   
 
 ## 📦 Installation
 
