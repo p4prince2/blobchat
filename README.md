@@ -1,7 +1,7 @@
 # BlobChat
 
 A lightweight Python library for transforming messy chat text into clean, meaningful data.
-
+ 
 BlobChat helps you clean, normalize, and process chat conversations (WhatsApp, Messenger, etc.) — similar to how pandas works with structured data.
 
 ---
