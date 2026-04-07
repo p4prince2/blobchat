@@ -66,7 +66,7 @@ print(process_chat(text))
 ## 💻 CLI Usage
 
 ```bash
-blobchat "u r awesome bro 😂"
+blobchat "u r awesome bro ilu 😂"
 ```
 
 ---
