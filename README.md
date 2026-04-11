@@ -6,7 +6,7 @@ BlobChat helps you clean, normalize, and process chat conversations (WhatsApp, M
 
 ---
   
-## 🚀 Features
+## 🚀 Features   
 
 * 🧹 Clean and normalize chat text
 * 🔤 Convert slang to meaningful text (`u → you`, `gr8 → great`)
