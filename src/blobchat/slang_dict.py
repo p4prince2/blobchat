@@ -47,6 +47,7 @@ CHAT_DICT = {
     "l8r": "later",
     "l8ter": "later",
     "m8": "mate",
+    "fr": "for real",
     "n2m": "not too much",
     "n2b": "not too bad",
     "r8": "rate",
