@@ -9,6 +9,6 @@
 
 
 import blobchat as bc
-
+ 
 text = "gn ilu  "
 print(bc.clean(text))
